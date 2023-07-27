@@ -41,7 +41,7 @@ const defaultOptions = {
   errorMessage:'알 수 없는 오류가 발생했습니다.'
 }
 
-function delayP(options){
+export function delayP(options){
   
   // 얕은 복사
   let config = {...defaultOptions}
@@ -80,15 +80,15 @@ delayP({shouldReject:true})
   console.log('어쨌든 실행합니다.');
 })
 
-// delayP()
-// .then(
-//   ({name,age})=>{
-//     console.log( name );
-//   }
-// )
-// .catch((err)=>{
-//   console.log( err );
-// })
+delayP()
+.then(
+  ({name,age})=>{
+    console.log( name );
+  }
+)
+.catch((err)=>{
+  console.log( err );
+})
 
 
 
